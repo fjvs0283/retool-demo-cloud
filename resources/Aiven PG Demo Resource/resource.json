@@ -4,7 +4,7 @@
   "port": "15391",
   "databaseName": "pagila",
   "databaseUsername": "avnadmin",
-  "databasePassword": "{{ environment.variables.pg_demo_resource_password }}",
+  "databasePassword": "",
   "description": null,
   "outboundRegion": null,
   "ssl": true,
