@@ -177,5 +177,14 @@
       <View id="a6464" viewKey="View 1" />
     </Container>
     <Button id="button1" text="Button" />
+    <Button id="button2" text="Button" />
+    <TextInput id="textInput2" labelPosition="top" placeholder="Enter value" />
+    <TextInput id="textInput1" labelPosition="top" placeholder="Enter value" />
+    <Image
+      id="image1"
+      heightType="fixed"
+      horizontalAlign="center"
+      src="https://picsum.photos/id/1025/800/600"
+    />
   </Frame>
 </App>
