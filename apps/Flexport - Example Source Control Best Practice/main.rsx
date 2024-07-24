@@ -177,5 +177,7 @@
       <View id="a6464" viewKey="View 1" />
     </Container>
     <Button id="button1" text="Button" />
+    <Button id="button2" text="Button" />
+    <TextInput id="textInput1" labelPosition="top" placeholder="Enter value" />
   </Frame>
 </App>
