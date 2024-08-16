@@ -1,0 +1,32 @@
+{
+  "type": "postgresql",
+  "host": "database-1.cn4wgmcwaile.us-east-2.rds.amazonaws.com",
+  "port": "5432",
+  "databaseName": "database-1",
+  "databaseUsername": "postgres",
+  "databasePassword": "",
+  "description": null,
+  "outboundRegion": null,
+  "ssl": true,
+  "editPrivilege": false,
+  "options": {
+    "ca_cert": "",
+    "sshHost": "",
+    "version": "SqlQueryUnified",
+    "sshPassword": "",
+    "sshUsername": "",
+    "authentication": "user_password",
+    "ca_cert_filename": "us-east-2-bundle.pem",
+    "connectionString": "",
+    "queryEditorModes": { "allowGuiMode": true, "allowSqlMode": true },
+    "sshTunnelEnabled": false,
+    "sshPrivateKeyName": "",
+    "rejectUnauthorized": true,
+    "skipVerifyHostname": false,
+    "userExplicitlySetRejectUnauthorized": true
+  },
+  "environment": "production",
+  "dynamicallyQueryable": false,
+  "uuid": "4c5d460f-0295-4837-a91b-0a07f8a612cf",
+  "toolscriptVersion": "1.0.0"
+}
