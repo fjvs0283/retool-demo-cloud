@@ -1,0 +1,1 @@
+return {{ formatDataAsArray(createAccount.data)[0] }};
