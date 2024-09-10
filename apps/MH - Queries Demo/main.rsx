@@ -350,5 +350,6 @@
       value="{{ getLatestAccountRecord.value }}
 "
     />
+    <Button id="button1" text="Button" />
   </Frame>
 </App>

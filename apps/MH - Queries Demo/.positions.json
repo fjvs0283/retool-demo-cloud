@@ -1,4 +1,10 @@
 {
+  "button1": {
+    "row": 18.2,
+    "col": 9,
+    "height": 1,
+    "width": 2
+  },
   "email": {
     "container": "form1",
     "row": 0.4,
