@@ -1,0 +1,49 @@
+name: Run Cypress Tests
+
+# Trigger the workflow on pushes to main branch and pull requests
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the code from your repository
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Node.js environment (Cypress needs Node.js)
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'  # Specify the Node.js version (can be different)
+
+      # Step 3: Install npm dependencies (including Cypress)
+      - name: Install dependencies
+        run: npm install
+
+      # Step 4: Run Cypress tests in headless mode
+      - name: Run Cypress Tests
+        run: npm run cypress:run  # This assumes you have a Cypress run script in package.json
+
+      # Step 5: Upload Cypress videos and screenshots for debugging (optional)
+      - name: Upload Cypress videos
+        if: failure()
+        uses: actions/upload-artifact@v3
+        with:
+          name: cypress-videos
+          path: cypress/videos
+
+      - name: Upload Cypress screenshots
+        if: failure()
+        uses: actions/upload-artifact@v3
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
+
