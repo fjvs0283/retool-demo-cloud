@@ -20,13 +20,13 @@ jobs:
       # Step 2: Navigate to the correct subdirectory and install dependencies
       - name: Install dependencies
         run: |
-          cd retool-demo-cloud/user
+          cd user
           npm install
 
       # Step 3: Run Cypress tests in headless mode
       - name: Run Cypress Tests
         run: |
-          cd retool-demo-cloud/user
+          cd user
           npm run cypress:run
 
       # Step 4: Upload Cypress videos for debugging (optional)
