@@ -1,6 +1,5 @@
-name: Run Cypress Tests
+name: End-to-end tests
 
-# Trigger the workflow on pushes to main branch and pull requests
 on:
   push:
     branches:
@@ -15,35 +14,33 @@ jobs:
 
     steps:
       # Step 1: Checkout the code from your repository
-      - name: Checkout the repository
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Step 2: Set up Node.js environment (Cypress needs Node.js)
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'  # Specify the Node.js version (can be different)
-
-      # Step 3: Install npm dependencies (including Cypress)
+      # Step 2: Navigate to the correct subdirectory and install dependencies
       - name: Install dependencies
-        run: npm install
+        run: |
+          cd retool-demo-cloud/user
+          npm install
 
-      # Step 4: Run Cypress tests in headless mode
+      # Step 3: Run Cypress tests in headless mode
       - name: Run Cypress Tests
-        run: npm run cypress:run  # This assumes you have a Cypress run script in package.json
+        run: |
+          cd retool-demo-cloud/user
+          npm run cypress:run
 
-      # Step 5: Upload Cypress videos and screenshots for debugging (optional)
+      # Step 4: Upload Cypress videos for debugging (optional)
       - name: Upload Cypress videos
         if: failure()
         uses: actions/upload-artifact@v3
         with:
           name: cypress-videos
-          path: cypress/videos
+          path: retool-demo-cloud/user/cypress/videos
 
+      # Step 5: Upload Cypress screenshots for debugging (optional)
       - name: Upload Cypress screenshots
         if: failure()
         uses: actions/upload-artifact@v3
         with:
           name: cypress-screenshots
-          path: cypress/screenshots
-
+          path: retool-demo-cloud/user/cypress/screenshots
