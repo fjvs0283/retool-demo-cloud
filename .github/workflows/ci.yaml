@@ -23,11 +23,11 @@ jobs:
           cd user
           npm install
 
-      # Step 3: Run Cypress tests in headless mode
-      - name: Run Cypress Tests
+      # Step 3: Run Cypress tests in headless mode using Chrome
+      - name: Run Cypress Tests in Chrome
         run: |
           cd user
-          npm run cypress:run
+          npx cypress run --browser chrome --headless
 
       # Step 4: Upload Cypress videos for debugging (optional)
       - name: Upload Cypress videos
