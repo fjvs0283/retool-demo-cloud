@@ -35,7 +35,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: cypress-videos
-          path: retool-demo-cloud/user/cypress/videos
+          path: user/cypress/videos
 
       # Step 5: Upload Cypress screenshots for debugging (optional)
       - name: Upload Cypress screenshots
@@ -43,4 +43,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: cypress-screenshots
-          path: retool-demo-cloud/user/cypress/screenshots
+          path: user/cypress/screenshots
