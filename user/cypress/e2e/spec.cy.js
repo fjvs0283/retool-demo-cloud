@@ -39,7 +39,7 @@ describe("User Management", () => {
 
   it("Test 2: Type in the search input and interact with the table and modal", () => {
     // Ensure the input is visible before interacting
-    cy.get('#textInput1--0', { timeout: 10000 }).should('be.visible').type('heat');
+    cy.get('#textInput1--0', { timeout: 10000 }).should('be.visible').type('pump');
     cy.wait(500);
 
     // Scroll to the right of the table
@@ -69,7 +69,7 @@ describe("User Management", () => {
 
   it("Test 3: Type in the search input and interact with the table and modal", () => {
     // Ensure the input is visible before interacting
-    cy.get('#textInput1--0', { timeout: 10000 }).should('be.visible').type('heat');
+    cy.get('#textInput1--0', { timeout: 10000 }).should('be.visible').type('panel');
     cy.wait(500);
 
     // Scroll to the right of the table
