@@ -10,7 +10,7 @@
   "ssl": null,
   "editPrivilege": null,
   "options": {
-    "baseURL": "https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a",
+    "baseURL": "{{ environment.variables.cocktail_api }}",
     "headers": [["", ""]],
     "urlparams": [["", ""]],
     "auth0_domain": "",
