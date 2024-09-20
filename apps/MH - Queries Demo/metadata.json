@@ -1,0 +1,97 @@
+{
+  "toolscriptVersion": "1.0.0",
+  "version": "43.0.9",
+  "pageUuid": "eebedcc0-42e0-11ef-b029-3baf2f395db4",
+  "appTemplate": {
+    "pageCodeFolders": {
+      "object": {
+        "testQuery": {
+          "array": []
+        },
+        "addUser": {
+          "array": []
+        },
+        "createRecord": {
+          "array": []
+        },
+        "getRecords": {
+          "array": []
+        },
+        "query01": {
+          "array": []
+        },
+        "query02": {
+          "array": []
+        },
+        "dataForQuery02": {
+          "array": []
+        },
+        "fullDataRecord": {
+          "array": []
+        },
+        "latestDataRecord": {
+          "array": []
+        },
+        "latestRecord": {
+          "array": []
+        },
+        "roles": {
+          "array": []
+        },
+        "role": {
+          "array": []
+        },
+        "email": {
+          "array": []
+        },
+        "signup_date": {
+          "array": []
+        },
+        "enabled": {
+          "array": []
+        },
+        "full_name": {
+          "array": []
+        },
+        "getRoles": {
+          "array": []
+        },
+        "fullName": {
+          "array": []
+        },
+        "signupDate": {
+          "array": []
+        },
+        "getUserRecords": {
+          "array": []
+        },
+        "getAccountRecords": {
+          "array": []
+        },
+        "createUserRecord": {
+          "array": []
+        },
+        "createAccountRecord": {
+          "array": []
+        },
+        "getLatestAccountRecord": {
+          "array": []
+        },
+        "getAccounts": {
+          "array": []
+        },
+        "getUsers": {
+          "array": []
+        },
+        "createAccount": {
+          "array": []
+        },
+        "createUser": {
+          "array": []
+        }
+      }
+    },
+    "version": "3.89.0",
+    "experimentalDataTabEnabled": true
+  }
+}
