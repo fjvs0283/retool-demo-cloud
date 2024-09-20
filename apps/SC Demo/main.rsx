@@ -8,6 +8,63 @@
     sticky={null}
     type="main"
   >
+    <PlotlyChart
+      id="chart1"
+      dataseries={{
+        ordered: [
+          {
+            0: {
+              ordered: [
+                { label: "sales" },
+                {
+                  datasource:
+                    '{{formatDataAsObject([{\n  "region" : "East",\n  "sales": 3700,\n  "spend": 4000\n}, {\n  "region" : "West",\n  "sales": 6000,\n  "spend": 3895\n}, {\n  "region" : "South",\n  "sales": 4500,\n  "spend": 5500\n}, {\n  "region" : "Central",\n  "sales": 5230,\n  "spend": 4200\n}])[\'sales\']}}',
+                },
+                { chartType: "bar" },
+                { aggregationType: "sum" },
+                { color: "#1E3A8A" },
+                { colors: { ordered: [] } },
+                { visible: true },
+                {
+                  hovertemplate:
+                    "<b>%{x}</b><br>%{fullData.name}: %{y}<extra></extra>",
+                },
+              ],
+            },
+          },
+          {
+            1: {
+              ordered: [
+                { label: "spend" },
+                {
+                  datasource:
+                    '{{formatDataAsObject([{\n  "region" : "East",\n  "sales": 3700,\n  "spend": 4000\n}, {\n  "region" : "West",\n  "sales": 6000,\n  "spend": 3895\n}, {\n  "region" : "South",\n  "sales": 4500,\n  "spend": 5500\n}, {\n  "region" : "Central",\n  "sales": 5230,\n  "spend": 4200\n}])[\'spend\']}}',
+                },
+                { chartType: "bar" },
+                { aggregationType: "sum" },
+                { color: "#3170F9" },
+                { colors: { ordered: [] } },
+                { visible: true },
+                {
+                  hovertemplate:
+                    "<b>%{x}</b><br>%{fullData.name}: %{y}<extra></extra>",
+                },
+              ],
+            },
+          },
+        ],
+      }}
+      datasourceDataType="array"
+      datasourceInputMode="javascript"
+      datasourceJS={
+        '[{\n  "region" : "East",\n  "sales": 3700,\n  "spend": 4000\n}, {\n  "region" : "West",\n  "sales": 6000,\n  "spend": 3895\n}, {\n  "region" : "South",\n  "sales": 4500,\n  "spend": 5500\n}, {\n  "region" : "Central",\n  "sales": 5230,\n  "spend": 4200\n}]'
+      }
+      skipDatasourceUpdate={true}
+      xAxis={
+        '{{formatDataAsObject([{\n  "region" : "East",\n  "sales": 3700,\n  "spend": 4000\n}, {\n  "region" : "West",\n  "sales": 6000,\n  "spend": 3895\n}, {\n  "region" : "South",\n  "sales": 4500,\n  "spend": 5500\n}, {\n  "region" : "Central",\n  "sales": 5230,\n  "spend": 4200\n}]).region}}'
+      }
+      xAxisDropdown="region"
+    />
     <Table
       id="table1"
       cellSelection="none"
@@ -160,5 +217,31 @@
       </ToolbarButton>
     </Table>
     <Button id="button1" text="Button" />
+    <Container
+      id="tabbedContainer1"
+      currentViewKey="{{ self.viewKeys[0] }}"
+      footerPadding="4px 12px"
+      headerPadding="4px 12px"
+      padding="12px"
+      showBody={true}
+      showHeader={true}
+    >
+      <Header>
+        <Tabs
+          id="tabs1"
+          itemMode="static"
+          navigateContainer={true}
+          targetContainerId="tabbedContainer1"
+          value="{{ self.values[0] }}"
+        >
+          <Option id="3388e" value="Tab 1" />
+          <Option id="a2af2" value="Tab 2" />
+          <Option id="f37c0" value="Tab 3" />
+        </Tabs>
+      </Header>
+      <View id="73977" viewKey="View 1" />
+      <View id="7de38" viewKey="View 2" />
+      <View id="28967" viewKey="View 3" />
+    </Container>
   </Frame>
 </App>
