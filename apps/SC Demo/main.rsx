@@ -160,5 +160,31 @@
       </ToolbarButton>
     </Table>
     <Button id="button1" text="Button" />
+    <Container
+      id="tabbedContainer1"
+      currentViewKey="{{ self.viewKeys[0] }}"
+      footerPadding="4px 12px"
+      headerPadding="4px 12px"
+      padding="12px"
+      showBody={true}
+      showHeader={true}
+    >
+      <Header>
+        <Tabs
+          id="tabs1"
+          itemMode="static"
+          navigateContainer={true}
+          targetContainerId="tabbedContainer1"
+          value="{{ self.values[0] }}"
+        >
+          <Option id="3388e" value="Tab 1" />
+          <Option id="a2af2" value="Tab 2" />
+          <Option id="f37c0" value="Tab 3" />
+        </Tabs>
+      </Header>
+      <View id="73977" viewKey="View 1" />
+      <View id="7de38" viewKey="View 2" />
+      <View id="28967" viewKey="View 3" />
+    </Container>
   </Frame>
 </App>
