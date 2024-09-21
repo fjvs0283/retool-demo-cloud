@@ -37,6 +37,8 @@ describe("User Management", () => {
 
   });
 
+  // this is just a small test.
+
   it("Test 2: Type in the search input and interact with the table and modal", () => {
     // Ensure the input is visible before interacting
     cy.get('#textInput1--0', { timeout: 10000 }).should('be.visible').type('pump');
@@ -97,5 +99,5 @@ describe("User Management", () => {
 
   });
 
-  
+
 });
