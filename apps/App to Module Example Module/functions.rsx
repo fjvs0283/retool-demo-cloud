@@ -2,7 +2,7 @@
   <JavascriptQuery
     id="query0"
     notificationDuration={4.5}
-    query={include("./lib/query1.js", "string")}
+    query={include("./lib/query0.js", "string")}
     resourceName="JavascriptQuery"
     showSuccessToaster={false}
   />
